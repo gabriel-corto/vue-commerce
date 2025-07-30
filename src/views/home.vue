@@ -14,7 +14,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="mt-10 grid grid-cols-3 gap-8">
+  <div class="mt-10 grid grid-cols-3 max-sm:grid-cols-1 gap-8">
     <ProductCard v-for="product in products" :key="product.id" :product="product" />
   </div>
 </template>
