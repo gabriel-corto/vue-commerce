@@ -5,7 +5,6 @@ import { priceFormatter } from '@/utils/formatter'
 import { Trash, X } from 'lucide-vue-next'
 
 const cartStore = useCartStore()
-const totalCart = cartStore.cart.reduce((total, item) => total + item.price * item.quantity, 0)
 </script>
 
 <template>
@@ -51,7 +50,14 @@ const totalCart = cartStore.cart.reduce((total, item) => total + item.price * it
       <div class="mt-6 border-t pt-4 border-neutral-200">
         <p class="flex justify-between text-lg font-semibold">
           <span>Total:</span>
-          <span>AKZ {{ priceFormatter.format(totalCart) }}</span>
+          <span
+            >AKZ
+            {{
+              priceFormatter.format(
+                cartStore.cart.reduce((total, item) => total + item.price * item.quantity, 0),
+              )
+            }}</span
+          >
         </p>
         <button
           class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition"

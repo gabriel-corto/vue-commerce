@@ -1,39 +1,48 @@
-# vue-commerce
+# 🛒 Vue Commerce
 
-This template should help get you started developing with Vue 3 in Vite.
+E-commerce simples feito com **Vue 3**, **TypeScript**, **TailwindCSS**, **Pinia**, **Vue Router** e **Axios**.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## ⚙️ Tecnologias
 
-## Type Support for `.vue` Imports in TS
+- [Vue 3](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
+- [Axios](https://axios-http.com/)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+---
 
-## Customize configuration
+## 📦 Instalação
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+## ▶️ Rodar localmente
 
-```sh
-pnpm dev
+```bash
+pnpm install
 ```
 
-### Type-Check, Compile and Minify for Production
+---
 
-```sh
-pnpm build
+## 📁 Estrutura do Projeto
+
 ```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
+src/
+├─ assets/         # Estilos (Tailwind, fontes, imagens)
+├─ components/     # Componentes reutilizáveis (Cart, Card, etc.)
+├─ layouts/        # Layouts principais da aplicação
+├─ libs/           # Configs externas (ex: axios instance)
+├─ router/         # Vue Router configs e rotas
+├─ services/       # Serviços que acessam APIs
+├─ stores/         # Pinia stores (cart, products...)
+├─ types/          # Tipagens TS (Product, CartItem...)
+├─ utils/          # Helpers / funções auxiliares
+├─ views/          # Páginas (Home, ProductDetail)
+├─ app.vue         # Root Component
+└─ main.ts         # Entry point
 ```
